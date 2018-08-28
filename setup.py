@@ -10,5 +10,5 @@ setup(name='colab_deeplearning',
       author='Dr David Race',
       author_email='dr.david.race@gmail.com',
       license='Apache License 2',
-      packages=['colab_gdrive'],
+      packages=['colab_deeplearning'],
       zip_safe=False)
