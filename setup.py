@@ -1,9 +1,9 @@
 '''
-Setup for colab_gdrive
+Setup for colab_deeplearning
 '''
 from setuptools import setup
 
-setup(name='colab_gdrive',
+setup(name='colab_deeplearning',
       version='0.0.1a',
       description='Functions for working with deep learning images from Colaboratory',
       url='git+https://github.com/drdavidrace/colab_deeplearning.git',
