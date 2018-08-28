@@ -192,6 +192,6 @@ def make_pretty_image(path, image):
     # Un-normalize the image so that it looks good
     image = image + CONFIG.MEANS
     
-    # Clip and Save the image
+    # Clip and Save the image 
     image = np.clip(image[0], 0, 255).astype('uint8')
     scipy.misc.imsave(path, image)
