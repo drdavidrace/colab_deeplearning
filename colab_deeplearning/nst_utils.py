@@ -194,4 +194,5 @@ def make_pretty_image(image):
     
     # Clip and Save the image 
     image = np.clip(image[0], 0, 255).astype('uint8')
-    scipy.misc.imsave(path, image)
+    return image
+    
