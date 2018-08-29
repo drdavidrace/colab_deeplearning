@@ -9,6 +9,8 @@ from matplotlib.pyplot import imshow
 from PIL import Image
 from colab_deeplearning.nst_utils import *
 
+from pprint import pprint
+
 import numpy as np
 import tensorflow as tf
 
@@ -77,6 +79,7 @@ def load_vgg_model(path):
     """
     
     vgg = scipy.io.loadmat(path)
+    pprint(vgg)
 
     vgg_layers = vgg['layers']
     
