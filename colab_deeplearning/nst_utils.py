@@ -109,6 +109,7 @@ def load_vgg_model(path):
         W, b = _weights(layer, layer_name)
         W = tf.constant(W)
         b = tf.constant(np.reshape(b, (b.size)))
+        pprint(tf.nn.conv2d(prev_layer, filter=W, strides=[1, 1, 1, 1], padding='SAME') + b)
         return tf.nn.conv2d(prev_layer, filter=W, strides=[1, 1, 1, 1], padding='SAME') + b
 
     def _conv2d_relu(prev_layer, layer, layer_name):
@@ -116,6 +117,7 @@ def load_vgg_model(path):
         Return the Conv2D + RELU layer using the weights, biases from the VGG
         model at 'layer'.
         """
+        pprint(_conv2d(prev_layer, layer, layer_name))
         return _relu(_conv2d(prev_layer, layer, layer_name))
 
     def _avgpool(prev_layer):
